@@ -16,6 +16,7 @@ target 'POPX' do
   pod 'JGProgressHUD'
   pod 'RealmSwift'
   pod 'SDWebImage'
+  pod 'CodableFirebase'
   
   target 'POPXTests' do
     inherit! :search_paths

@@ -30,10 +30,10 @@ class MainVC: UIViewController {
     let user = Auth.auth().currentUser!
     
     var uid = Set<String>()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        getUserData()
         uiView.layerGradient()
         setUserOnline()
         updateOnlineUser()
@@ -51,9 +51,9 @@ class MainVC: UIViewController {
         }
         
     }
-  
+    
     func SetImgUser(){
-     let images: [UIImage] = [#imageLiteral(resourceName: "Mike"),#imageLiteral(resourceName: "Alien"),#imageLiteral(resourceName: "Mummy"),#imageLiteral(resourceName: "Pumpkin"),#imageLiteral(resourceName: "Slimer"),#imageLiteral(resourceName: "Jack Skellington"),#imageLiteral(resourceName: "Freddie"),#imageLiteral(resourceName: "Devil"),#imageLiteral(resourceName: "Ghost"),#imageLiteral(resourceName: "Jason"),#imageLiteral(resourceName: "Devil"),#imageLiteral(resourceName: "Casper"),#imageLiteral(resourceName: "Frankenstein")]
+        let images: [UIImage] = [#imageLiteral(resourceName: "Mike"),#imageLiteral(resourceName: "Alien"),#imageLiteral(resourceName: "Mummy"),#imageLiteral(resourceName: "Pumpkin"),#imageLiteral(resourceName: "Slimer"),#imageLiteral(resourceName: "Jack Skellington"),#imageLiteral(resourceName: "Freddie"),#imageLiteral(resourceName: "Devil"),#imageLiteral(resourceName: "Ghost"),#imageLiteral(resourceName: "Jason"),#imageLiteral(resourceName: "Devil"),#imageLiteral(resourceName: "Casper"),#imageLiteral(resourceName: "Frankenstein")]
         let randomImage = images.shuffled().randomElement()
         imgUser.image = randomImage
     }
@@ -75,7 +75,8 @@ class MainVC: UIViewController {
     @IBAction func btnStartChat(){
         getOnlineUserId()
         SetImgUser()
-
+        getUserData()
+        
     }
     
     
@@ -112,7 +113,19 @@ class MainVC: UIViewController {
         }
         
     }
- 
+    
+    func getUserData() {
+        let ref = Database.database().reference()
+        ref.child("users").child("\(user.uid)").child("age").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let age = snapshot.value as? String {
+                print( "snapshot: \(age)")
+                self.txtAge.text = age
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
     
     func resetUserDefaults() {
         let defaults = UserDefaults.standard
@@ -122,3 +135,4 @@ class MainVC: UIViewController {
         }
     }
 }
+

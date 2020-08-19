@@ -68,6 +68,7 @@ class ChatVC: UIViewController {
                 for snap in snapshot{
                     if let postDict = snap.value as? [String:AnyObject]{
                         self.setMessage(msgId: snap.key, msgData: postDict)
+                        print(postDict["text"])
                     }
                 }
             }

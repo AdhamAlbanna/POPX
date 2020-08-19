@@ -4,6 +4,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - CodableFirebase (0.2.1)
   - FBSDKCoreKit (7.1.1):
     - FBSDKCoreKit/Basics (= 7.1.1)
     - FBSDKCoreKit/Core (= 7.1.1)
@@ -124,6 +125,7 @@ PODS:
   - SDWebImage/Core (5.8.4)
 
 DEPENDENCIES:
+  - CodableFirebase
   - FBSDKLoginKit (= 7.1.1)
   - Firebase/Auth
   - Firebase/Core
@@ -138,6 +140,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppAuth
+    - CodableFirebase
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -166,6 +169,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
   Firebase: ed042590caa0029392257529a8003c25ee82bc18
@@ -192,6 +196,6 @@ SPEC CHECKSUMS:
   RealmSwift: 233af88fffe05ed7f9305eecef100d477c0c2c42
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: d104f5f0678b4a9028550d290c25b4ec0ee35e2f
+PODFILE CHECKSUM: 9379e82c6fdd4b4731edeba8b72379e62dff9e74
 
 COCOAPODS: 1.9.3
