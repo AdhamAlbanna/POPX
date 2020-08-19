@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>323352767355-3bg3c6kl8cjg5rnoc6t5d5mcf7vrl9qr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.323352767355-3bg3c6kl8cjg5rnoc6t5d5mcf7vrl9qr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBR9sZYeqWFv1P0XJvypr8THNx0bGLvHtk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>323352767355</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.adham.POPX</string>
+	<key>PROJECT_ID</key>
+	<string>popx-random</string>
+	<key>STORAGE_BUCKET</key>
+	<string>popx-random.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:323352767355:ios:e3e674655e377c1b87abde</string>
+	<key>DATABASE_URL</key>
+	<string>https://popx-random.firebaseio.com</string>
+</dict>
+</plist>
