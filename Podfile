@@ -17,6 +17,7 @@ target 'POPX' do
   pod 'RealmSwift'
   pod 'SDWebImage'
   pod 'CodableFirebase'
+  pod 'IQKeyboardManagerSwift'
   
   target 'POPXTests' do
     inherit! :search_paths

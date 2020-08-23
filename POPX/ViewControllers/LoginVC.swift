@@ -26,15 +26,26 @@ class LoginVC: UIViewController{
     @IBOutlet weak var emailUIView : UIView!
     @IBOutlet weak var passwordUIView : UIView!
     
+    @IBOutlet weak var myBytton : UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
+        //myBytton.isUserInteractionEnabled  = true
+        
+        //myBytton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(myButtonAction)))
+        
+    }
+    
+    
+    @objc func myButtonAction(){
         
     }
     
     @IBAction func btnLogin(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
+        
         if (emailTF.text?.isEmpty==true) || (passwordTF.text?.isEmpty==true) {
             
             if (emailTF.text?.isEmpty==true) {
@@ -144,4 +155,9 @@ extension LoginVC: LoginButtonDelegate {
         })
     }
 
+    
+    
+    @IBAction func startLoginGoogle(){
+        
+    }
 }

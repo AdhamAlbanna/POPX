@@ -12,20 +12,26 @@ import FirebaseAuth
 import GoogleSignIn
 import FirebaseDatabase
 import FBSDKLoginKit
+import CodableFirebase
+
 
 
 
 class MainVC: UIViewController {
     
+
     @IBOutlet weak var lblUsername:UILabel!
     @IBOutlet weak var imgUser:UIImageView!
     @IBOutlet weak var txtLikes: UILabel!
     @IBOutlet weak var txtGender: UILabel!
     @IBOutlet weak var txtAge: UILabel!
     @IBOutlet weak var uiView:UIView!
+    @IBOutlet weak var uiViewCH: UIView!
     
     let userRef = Database.database().reference(withPath: "online")
     let dataRef = Database.database().reference().child("users")
+    
+
     
     let user = Auth.auth().currentUser!
     
@@ -35,6 +41,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         getUserData()
         uiView.layerGradient()
+        uiViewCH.layerGradient()
         setUserOnline()
         updateOnlineUser()
         getOnlineUserId()
@@ -77,6 +84,8 @@ class MainVC: UIViewController {
         SetImgUser()
         getUserData()
         
+        let ChatVC = self.storyboard!.instantiateViewController(identifier: "ChatVC")
+        present(ChatVC, animated: true, completion: nil)
     }
     
     
@@ -119,11 +128,30 @@ class MainVC: UIViewController {
         ref.child("users").child("\(user.uid)").child("age").observeSingleEvent(of: .value, with: { (snapshot) in
             if let age = snapshot.value as? String {
                 print( "snapshot: \(age)")
-                self.txtAge.text = age
+                self.txtAge.text = String(age)
             }
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+        ref.child("users").child("\(user.uid)").child("gender").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let gender = snapshot.value as? String {
+                print( "snapshot: \(gender)")
+                self.txtGender.text = gender
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        ref.child("users").child("\(user.uid)").child("likes").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let likes = snapshot.value as? String {
+                print( "snapshot: \(likes)")
+                self.txtGender.text = likes
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
     }
     
     
@@ -134,5 +162,32 @@ class MainVC: UIViewController {
             defaults.removeObject(forKey: key)
         }
     }
+    
+    
+    
+    
+//    func getDataToDb() {
+//
+//        AppDelegate.db.collection("RealEstate").getDocuments { (snapshot, err) in
+//            for i in snapshot!.documents{
+//
+//                AppDelegate.db.collection("RealEstate").document(i.documentID).collection(i.documentID).addSnapshotListener(includeMetadataChanges: true, listener: { (snapshot, er) in
+//                    self.getData = []
+//                    for (i) in (snapshot?.documents)! {
+//                        let jsonData = try! JSONSerialization.data(withJSONObject: i.data() ?? [:], options: [])
+//                        let users = try! JSONDecoder().decode(AddBuilding.self, from: jsonData )
+//                        print(users)
+//                        self.getData.append(users)
+//
+//                    }
+//                    self.collectionVC.reloadData()
+//                })
+//
+//
+//            }
+//
+//
+//        }
+//    }
+    
 }
-

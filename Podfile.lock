@@ -105,6 +105,7 @@ PODS:
   - InputBarAccessoryView (4.3.3):
     - InputBarAccessoryView/Core (= 4.3.3)
   - InputBarAccessoryView/Core (4.3.3)
+  - IQKeyboardManagerSwift (6.5.5)
   - JGProgressHUD (2.1)
   - leveldb-library (1.22)
   - MessageKit (3.1.0):
@@ -132,6 +133,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - GoogleSignIn
+  - IQKeyboardManagerSwift
   - JGProgressHUD
   - MessageKit
   - RealmSwift
@@ -158,6 +160,7 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - InputBarAccessoryView
+    - IQKeyboardManagerSwift
     - JGProgressHUD
     - leveldb-library
     - MessageKit
@@ -187,6 +190,7 @@ SPEC CHECKSUMS:
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   InputBarAccessoryView: 8e7fc09e9cba75e0fee5da13450e15c194806f69
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MessageKit: 3beb578737a5aa2bba25cc27c7b6d6faa09af5a7
@@ -196,6 +200,6 @@ SPEC CHECKSUMS:
   RealmSwift: 233af88fffe05ed7f9305eecef100d477c0c2c42
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: 9379e82c6fdd4b4731edeba8b72379e62dff9e74
+PODFILE CHECKSUM: e6afc3832562df98988e1f7a912d89cb7ebd8144
 
 COCOAPODS: 1.9.3

@@ -31,7 +31,8 @@ class SignupVC: UIViewController {
     @IBOutlet weak var confirmPasswordUIView : UIView!
     
     let spinner = JGProgressHUD(style: .dark)
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -61,6 +62,19 @@ class SignupVC: UIViewController {
         let minDate = calendar.date(byAdding: comps, to: Date())
         datePicker.maximumDate = maxDate
         datePicker.minimumDate = minDate
+    }
+    
+    func segmentedGender() -> String {
+        var genderTayp :String!
+        if(segmentedControl.selectedSegmentIndex == 0)
+        {
+            genderTayp = "Male"
+        }
+        else if(segmentedControl.selectedSegmentIndex == 1)
+        {
+            genderTayp = "Female"
+        }
+        return genderTayp
     }
     
     
@@ -99,11 +113,11 @@ class SignupVC: UIViewController {
             }
             
         }else {
-            creatAccount(ussername: usernameTF.text!, email: emailTF.text!, phone: phoneTF.text!, password: passwordTF.text!, age: String(getUserAge()), gender: "\(segmentedControl!.selectedSegmentIndex)")
+            creatAccount(ussername: usernameTF.text!, email: emailTF.text!, phone: phoneTF.text!, password: passwordTF.text!, age: getUserAge(), gender: segmentedGender())
         }
     }
     
-    func creatAccount(ussername:String,email:String,phone:String,password:String,age:String,gender:String){
+    func creatAccount(ussername:String,email:String,phone:String,password:String,age:Int,gender:String){
         spinner.show(in: view)
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             
@@ -116,7 +130,7 @@ class SignupVC: UIViewController {
                 return
             }
             guard let uid = result?.user.uid else { return }
-            let values = ["username":ussername,"email":email,"phone":phone,"password":password,"age":age,"gender":gender]
+            let values = ["username":ussername,"email":email,"phone":phone,"password":password,"age":age,"gender":gender,"likes":0] as [String : Any]
             Database.database().reference().child("users").child(uid).updateChildValues(values) { (erorr, ref) in
                 if let error = error {
                     print("Error to update values : ",error.localizedDescription)

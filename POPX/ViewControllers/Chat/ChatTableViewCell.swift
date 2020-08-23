@@ -21,8 +21,6 @@ class ChatTableViewCell: UITableViewCell {
     func setTextWithImage(msg:Message){
         txtText.text="\(msg.userName!):\(msg.text!)"
         SetImage(url: msg.imagePath!)
-       //self.iv_Image_post.layer.cornerRadius = 25;
-      // self.iv_Image_post.layer.masksToBounds = true;
     }
     
     func SetImage(url:String){

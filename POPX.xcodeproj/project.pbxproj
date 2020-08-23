@@ -20,6 +20,7 @@
 		BC22F12624D99C1100A77658 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC22F12524D99C1100A77658 /* UIImageView+Extension.swift */; };
 		BC2E0E4724E9D8500069D806 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2E0E4624E9D8500069D806 /* ChatTableViewCell.swift */; };
 		BC2EB1A024E9D41500B94066 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EB19F24E9D41500B94066 /* Message.swift */; };
+		BCA9549224ED5F1200A26570 /* CodableFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9549124ED5F1200A26570 /* CodableFirebase.swift */; };
 		BCB25F3424D2D8BB00052A1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB25F3324D2D8BB00052A1A /* AppDelegate.swift */; };
 		BCB25F3624D2D8BB00052A1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB25F3524D2D8BB00052A1A /* SceneDelegate.swift */; };
 		BCB25F3824D2D8BB00052A1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB25F3724D2D8BB00052A1A /* ViewController.swift */; };
@@ -70,6 +71,7 @@
 		BC22F12524D99C1100A77658 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		BC2E0E4624E9D8500069D806 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		BC2EB19F24E9D41500B94066 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		BCA9549124ED5F1200A26570 /* CodableFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebase.swift; sourceTree = "<group>"; };
 		BCB25F3024D2D8BB00052A1A /* POPX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POPX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB25F3324D2D8BB00052A1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB25F3524D2D8BB00052A1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		BCA9549024ED5EAB00A26570 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCA9549124ED5F1200A26570 /* CodableFirebase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BCB25F2724D2D8BB00052A1A = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		BCB25F3224D2D8BB00052A1A /* POPX */ = {
 			isa = PBXGroup;
 			children = (
+				BCA9549024ED5EAB00A26570 /* Model */,
 				BCB25F6924D2E22C00052A1A /* Extensions */,
 				BCB25F6C24D2FBBD00052A1A /* ViewControllers */,
 				BCB25F3324D2D8BB00052A1A /* AppDelegate.swift */,
@@ -530,6 +541,7 @@
 				BC2EB1A024E9D41500B94066 /* Message.swift in Sources */,
 				BC043AE724D8AEF9006982DB /* MessagesVC.swift in Sources */,
 				BCB25F7224D313F500052A1A /* UIStoryboard+Extension.swift in Sources */,
+				BCA9549224ED5F1200A26570 /* CodableFirebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = POPX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,6 +736,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = POPX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
