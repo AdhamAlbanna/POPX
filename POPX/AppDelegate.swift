@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
-            print(error.localizedDescription)
+            debugLog(error.localizedDescription)
             return
         }else {
             guard let authentication = user.authentication else { return }
@@ -58,9 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
                 if error == nil {
                     
-                    print(result?.user.email as Any)
-                    print(result?.user.displayName as Any)
-                    print(result?.user.photoURL as Any)
                     
                     self.userDefault.set(true, forKey: "usersignin")
                     self.userDefault.synchronize()
@@ -76,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     scene?.rootViewController = story
                     
                 } else {
-                    print(error?.localizedDescription as Any)
+                    debugLog(error?.localizedDescription as Any)
                 }
             }
         }

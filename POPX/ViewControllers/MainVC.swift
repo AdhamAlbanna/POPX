@@ -14,9 +14,6 @@ import FirebaseDatabase
 import FBSDKLoginKit
 import CodableFirebase
 
-
-
-
 class MainVC: UIViewController {
     
 
@@ -69,7 +66,7 @@ class MainVC: UIViewController {
         
         GIDSignIn.sharedInstance()?.signOut()
         do { try Auth.auth().signOut() }
-        catch { print("already logged out") }
+        catch { debugLog("already logged out") }
         let onlineRef = userRef.child(user.uid)
         onlineRef.removeValue()
         LoginManager().logOut()
@@ -118,7 +115,7 @@ class MainVC: UIViewController {
                 }
             }
         }) { (error) in
-            print(error.localizedDescription)
+            debugLog(error.localizedDescription)
         }
         
     }
@@ -127,29 +124,29 @@ class MainVC: UIViewController {
         let ref = Database.database().reference()
         ref.child("users").child("\(user.uid)").child("age").observeSingleEvent(of: .value, with: { (snapshot) in
             if let age = snapshot.value as? String {
-                print( "snapshot: \(age)")
+                debugLog( "snapshot: \(age)")
                 self.txtAge.text = String(age)
             }
         }) { (error) in
-            print(error.localizedDescription)
+            debugLog(error.localizedDescription)
         }
         
         ref.child("users").child("\(user.uid)").child("gender").observeSingleEvent(of: .value, with: { (snapshot) in
             if let gender = snapshot.value as? String {
-                print( "snapshot: \(gender)")
+                debugLog( "snapshot: \(gender)")
                 self.txtGender.text = gender
             }
         }) { (error) in
-            print(error.localizedDescription)
+            debugLog(error.localizedDescription)
         }
         
         ref.child("users").child("\(user.uid)").child("likes").observeSingleEvent(of: .value, with: { (snapshot) in
             if let likes = snapshot.value as? String {
-                print( "snapshot: \(likes)")
+                debugLog( "snapshot: \(likes)")
                 self.txtGender.text = likes
             }
         }) { (error) in
-            print(error.localizedDescription)
+            debugLog(error.localizedDescription)
         }
         
     }
@@ -166,28 +163,5 @@ class MainVC: UIViewController {
     
     
     
-//    func getDataToDb() {
-//
-//        AppDelegate.db.collection("RealEstate").getDocuments { (snapshot, err) in
-//            for i in snapshot!.documents{
-//
-//                AppDelegate.db.collection("RealEstate").document(i.documentID).collection(i.documentID).addSnapshotListener(includeMetadataChanges: true, listener: { (snapshot, er) in
-//                    self.getData = []
-//                    for (i) in (snapshot?.documents)! {
-//                        let jsonData = try! JSONSerialization.data(withJSONObject: i.data() ?? [:], options: [])
-//                        let users = try! JSONDecoder().decode(AddBuilding.self, from: jsonData )
-//                        print(users)
-//                        self.getData.append(users)
-//
-//                    }
-//                    self.collectionVC.reloadData()
-//                })
-//
-//
-//            }
-//
-//
-//        }
-//    }
     
 }

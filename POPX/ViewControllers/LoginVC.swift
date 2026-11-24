@@ -13,7 +13,6 @@ import GoogleSignIn
 import FBSDKLoginKit
 import JGProgressHUD
 
-
 class LoginVC: UIViewController{
     
     let userDefault = UserDefaults()
@@ -31,9 +30,7 @@ class LoginVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        //myBytton.isUserInteractionEnabled  = true
         
-        //myBytton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(myButtonAction)))
         
     }
     
@@ -80,20 +77,19 @@ class LoginVC: UIViewController{
                 let alert = UIAlertController(title: "login field", message: "\(error.localizedDescription)", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
-                print("Failed to signin user :",error.localizedDescription)
+                debugLog("Failed to signin user :",error.localizedDescription)
                 return
             }
             self.spinner.dismiss()
             let MainVC = self.storyboard!.instantiateViewController(identifier: "UITabBarController")
             self.present(MainVC, animated: true, completion: nil)
-            print("login success")
+            debugLog("login success")
             self.toastMessage("Login Success")
             self.userDefault.set(true, forKey: "usersignin")
             self.userDefault.synchronize()
         }
     }
 }
-
 
 extension LoginVC: LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
@@ -102,7 +98,7 @@ extension LoginVC: LoginButtonDelegate {
 
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         guard let token = result?.token?.tokenString else {
-            print("User failed to log in with facebook")
+            debugLog("User failed to log in with facebook")
             return
         }
 
@@ -116,11 +112,11 @@ extension LoginVC: LoginButtonDelegate {
         facebookRequest.start(completionHandler: { _, result, error in
             guard let result = result as? [String: Any],
                 error == nil else {
-                    print("Failed to make facebook graph request")
+                    debugLog("Failed to make facebook graph request")
                     return
             }
 
-            print(result)
+            debugLog(result)
 
             guard let firstName = result["first_name"] as? String,
                 let lastName = result["last_name"] as? String,
@@ -128,13 +124,12 @@ extension LoginVC: LoginButtonDelegate {
                 let picture = result["picture"] as? [String: Any],
                 let data = picture["data"] as? [String: Any],
                 let pictureUrl = data["url"] as? String else {
-                    print("Faield to get email and name from fb result")
+                    debugLog("Failed to get email and name from fb result")
                     return
             }
 
             UserDefaults.standard.set(email, forKey: "email")
             UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
-
 
             let credential = FacebookAuthProvider.credential(withAccessToken: token)
             FirebaseAuth.Auth.auth().signIn(with: credential, completion: { [weak self] authResult, error in
@@ -144,12 +139,12 @@ extension LoginVC: LoginButtonDelegate {
 
                 guard authResult != nil, error == nil else {
                     if let error = error {
-                        print("Facebook credential login failed, MFA may be needed - \(error)")
+                        debugLog("Facebook credential login failed, MFA may be needed - \(error)")
                     }
                     return
                     
                 }
-                print("Successfully logged user in")
+                debugLog("Successfully logged user in")
                 strongSelf.navigationController?.dismiss(animated: true, completion: nil)
             })
         })

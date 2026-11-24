@@ -47,7 +47,7 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -72,7 +72,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="28"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -95,7 +95,7 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -120,7 +120,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="28"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -140,7 +140,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="24"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -177,7 +177,7 @@
                                                             <constraint firstAttribute="width" constant="125" id="kVe-ke-7eO"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="8"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -196,7 +196,7 @@
                                                             <constraint firstAttribute="width" constant="125" id="N19-bO-46H"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="8"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -326,7 +326,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -351,7 +351,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -374,7 +374,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -399,7 +399,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -422,7 +422,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -447,7 +447,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -470,7 +470,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -495,7 +495,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -518,7 +518,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -543,7 +543,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -581,7 +581,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -616,7 +616,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="24"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -823,7 +823,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                         <real key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
@@ -920,7 +920,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="gfs-yK-wuS" secondAttribute="bottom" constant="4" id="rLg-Yy-8U5"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                             <real key="value" value="12"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
@@ -933,13 +933,13 @@
                                                 <constraint firstItem="Sem-8R-eTs" firstAttribute="top" secondItem="XZZ-hd-lgy" secondAttribute="top" constant="6" id="lbR-FA-YDH"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                     <real key="value" value="12"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -972,7 +972,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="Ct9-o6-r68" secondAttribute="bottom" constant="4" id="w8P-yF-gpw"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                             <real key="value" value="12"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
@@ -985,13 +985,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="kks-le-R4F" secondAttribute="trailing" constant="20" symbolic="YES" id="jPL-Wf-zCW"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                     <real key="value" value="12"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -1070,7 +1070,7 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                 <color key="value" name="btnColor"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="23"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -1087,7 +1087,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="border">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="23"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
@@ -1244,7 +1244,7 @@
                                     <constraint firstAttribute="trailing" secondItem="t6x-r7-34j" secondAttribute="trailing" id="tdI-Am-H5B"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="reduis">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>

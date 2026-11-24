@@ -68,15 +68,6 @@ class ChatVC: UIViewController {
         }
     }
 
-//    func getMessages(messageKey: String){
-//        let li = Database.database().reference(withPath: "msg").child("\(userName.uid)_\(userUid)").observe(.value) { (dataSnapshot) in
-//
-//            guard dataSnapshot.exists(), dataSnapshot.children.allObjects.count > 0 else {
-//
-//                return
-//            }
-//        }
-//    }
     
     func getLastUser() {
         getUser { (userUid) in
@@ -95,35 +86,19 @@ class ChatVC: UIViewController {
             snapshot.children.forEach { (objct) in
                 let data = objct as! DataSnapshot
                 let key = data.key
-                print("getUser key: \(key)")
+                debugLog("getUser key: \(key)")
                 if self.userName.uid != key {
-                    print(key)
+                    debugLog(key)
                     completion?(key)
                 }
             }
         }) { (error) in
-            print("getUser error: \(error.localizedDescription)")
+            debugLog("getUser error: \(error.localizedDescription)")
             completion?(nil)
         }
     }
     
     
-//    func getUser(completion: ((_ userUid: String?) -> Void)? = nil){
-//        Database.database().reference(withPath: "online").observeSingleEvent(of: .value) { (dsn) in
-//            self.keys.removeAll()
-//            dsn.children.forEach { (objct) in
-//                let data = objct as! DataSnapshot
-//                let key =  data.key
-//                if self.userName.uid != key {
-//                    print(key)
-//                    self.keys.append(key)
-//                    completion?(key)
-//                    return
-//                }
-//            }
-//            print(self.keys[0])
-//        }
-//    }
     
     
     
@@ -133,7 +108,7 @@ class ChatVC: UIViewController {
             return
         }
         if massegeToSendTF.text == ""{
-            print("text field is embty")
+            debugLog("text field is empty")
         }else {
             
             let msg = ["userName":userName.email ?? "","date":ServerValue.timestamp(),"text":massegeToSendTF.text ?? ""] as [String : Any]
@@ -167,7 +142,7 @@ class ChatVC: UIViewController {
                 for snap in snapshot{
                     if let postDict = snap.value as? [String:AnyObject]{
                         self.setMessage(msgId: snap.key, msgData: postDict)
-                        print(postDict["text"] ?? "no msg")
+                        debugLog(postDict["text"] ?? "no msg")
                     }
                 }
             }
@@ -210,8 +185,6 @@ class ChatVC: UIViewController {
     }
 }
 
-
-
 extension ChatVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -220,10 +193,9 @@ extension ChatVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableViw: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = ListMessages[indexPath.row]
-        let identifire = (message.userName == self.userName.email) ? "cellText2" : "cellText"
-        let cell:ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifire,for: indexPath) as! ChatTableViewCell
+        let identifier = (message.userName == self.userName.email) ? "cellText2" : "cellText"
+        let cell:ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier,for: indexPath) as! ChatTableViewCell
         cell.setText(msg: message.text)
-        //cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
         return cell
         
     }
@@ -232,7 +204,6 @@ extension ChatVC: UITableViewDelegate,UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
 
 extension ChatVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -283,7 +254,6 @@ extension ChatVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
             return
         }
         
-        //self.imageView.image = selectedImage
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

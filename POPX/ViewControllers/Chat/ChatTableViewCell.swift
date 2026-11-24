@@ -31,10 +31,8 @@ class ChatTableViewCell: UITableViewCell {
         
         islandRef.getData(maxSize: 8 * 1024 * 1024) { data, error in
             if let error = error {
-                print(error)
+                debugLog(error)
             } else {
-                // Data for "images/island.jpg" is returned
-                // let image = UIImage(data: data!)
                 self.cellTextImg.image = UIImage(data: data!)
             }
         }

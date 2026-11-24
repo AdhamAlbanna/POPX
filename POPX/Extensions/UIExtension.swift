@@ -36,7 +36,7 @@ extension UIView {
         
     }
     
-    @IBInspectable var reduis :CGFloat {
+    @IBInspectable var radius :CGFloat {
         set{
             self.layer.cornerRadius = newValue
         }
@@ -118,3 +118,10 @@ extension UIViewController {
     }
     }
 }}
+
+/// Prints only in debug builds, so release builds never log.
+func debugLog(_ items: Any...) {
+    #if DEBUG
+    print(items.map { "\($0)" }.joined(separator: " "))
+    #endif
+}

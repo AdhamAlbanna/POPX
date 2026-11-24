@@ -126,19 +126,19 @@ class SignupVC: UIViewController {
                 let alert = UIAlertController(title: "SignUp field", message: "\(error!.localizedDescription)", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
-                print(error!.localizedDescription)
+                debugLog(error!.localizedDescription)
                 return
             }
             guard let uid = result?.user.uid else { return }
             let values = ["username":ussername,"email":email,"phone":phone,"password":password,"age":age,"gender":gender,"likes":0] as [String : Any]
             Database.database().reference().child("users").child(uid).updateChildValues(values) { (erorr, ref) in
                 if let error = error {
-                    print("Error to update values : ",error.localizedDescription)
+                    debugLog("Error to update values : ",error.localizedDescription)
                     return
                 }
             }
             self.spinner.dismiss()
-            //user register sucsseful
+            //user register successful
             self.dismiss(animated: true, completion: nil)
         }
     }

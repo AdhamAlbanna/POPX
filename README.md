@@ -26,5 +26,5 @@ A social chat app for iOS built with **Swift** and **Firebase**. Users sign in, 
 4. Add your own Firebase project: replace `GoogleService-Info.plist` with the one from your Firebase console, and set up Google and Facebook sign-in for your bundle ID
 5. Choose a simulator or device and press **Run**
 
-## Author
+## Maintainer
 Adham Albanna · [LinkedIn](https://www.linkedin.com/in/adhamalbanna/)
